@@ -17,11 +17,15 @@ var INDEX = fs.readFileSync('./public/index.html', 'utf8');
 var $ = cheerio.load(INDEX);
 var images = [];
 
+// estrazione immagini dal file HTML
+
 $('img').each(function(index, image) {
 
   images.push($(this).attr('src'));
 
 });
+
+// per ogni immagine, avvio un downloader che la salva nella dest giusta
 
 async.each(images, function(image, cb) {
 
@@ -41,7 +45,7 @@ async.each(images, function(image, cb) {
 
   if (err) throw err;
 
-  // downloading last files
+  // Completate le immagini, avvio download file accessori (css, js)
 
   async.parallel([
 
