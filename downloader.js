@@ -48,6 +48,10 @@ async.each(images, function(image, cb) {
     // CSS
 
     function(cb) {
+
+      console.log('Downloading:', ROOT + 'css/normalize.css');
+      console.log('Downloading:', ROOT + 'css/main.css');
+
       new Download()
         .get(ROOT + 'css/normalize.css')
         .get(ROOT + 'css/main.css')
@@ -58,9 +62,22 @@ async.each(images, function(image, cb) {
     // JS
 
     function(cb) {
+
+      console.log('Downloading:', ROOT + 'js/main.js');
+
       new Download()
         .get(ROOT + 'js/main.js')
         .dest(DEST_JS)
+        .run(cb);
+    },
+
+    function(cb) {
+
+      console.log('Downloading:', ROOT + 'js/vendor/jquery-1.11.0.min.js');
+
+      new Download()
+        .get(ROOT + 'js/vendor/jquery-1.11.0.min.js')
+        .dest(DEST_JS + 'vendor/')
         .run(cb);
     }
 
