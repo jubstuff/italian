@@ -9,7 +9,7 @@ var cheerio = require('cheerio');
 
 var ROOT = 'http://www.bombmanual.com/manual/1/html/';
 var DEST_IMG = './public/img';
-var DEST_CSS = './public/CSS';
+var DEST_CSS = './public/css';
 
 var INDEX = fs.readFileSync('./public/index.html', 'utf8');
 
