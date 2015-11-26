@@ -301,25 +301,24 @@
       <div class="page">
         <div class="page-header">
           <span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
-          <span class="page-header-section-title">Keypads</span>
+          <span class="page-header-section-title">Tastierini</span>
         </div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
           <img src="img/KeypadComponent.svg" class="diagram"/>
 
-          <h2>On the Subject of Keypads</h2>
+          <h2>In caso di tastierini</h2>
 
           <p class="flavour-text">
-            I'm not sure what these symbols are, but I suspect they have
-            something to do with occult.
+            Non so bene cosa questi simboli rappresentino, ma ho il sospetto
+            che abbiano qualcosa a che vedere con l'occulto.
           </p>
           <ul>
             <li>
-              Only one column below has all four of the symbols from the keypad.
+              Solo una delle colonne sottostanti, contiene tutti e quattro i simboli del tastierino.
             </li>
             <li>
-              Press the four buttons in the order their symbols appear from top
-              to bottom within that column.
+              Premi i quattro bottoni nell'ordine di apparizione dall'alto al basso della colonna che li contiene tutti.
             </li>
           </ul>
           <br/>
@@ -509,98 +508,107 @@
       <div class="page">
         <div class="page-header">
           <span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
-          <span class="page-header-section-title">Simon Says</span>
+          <span class="page-header-section-title">Simon Dice</span>
         </div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
           <img src="img/SimonComponent.svg" class="diagram"/>
 
-          <h2>On the Subject of Simon Says</h2>
+          <h2>In caso di Simon</h2>
 
-          <p class="flavour-text">This is like one of those toys you played with
-            as a kid where you have to match the pattern that appears, except
-            this one is a knockoff that was probably purchased at a dollar
-            store.</p>
+          <p class="flavour-text">Questo è simile a quei giochi che usavi da bambino
+            nel quale dovevi ripetere una sequenza di colori sempre più lunga.
+            Questo qui, però, sembra più una versione tarocca, comprata per un
+            dollaro al tabacchino sotto casa.</p>
 
           <ol>
-            <li>One of the four colored buttons will flash.</li>
-            <li>Using the correct table below, press the button with the
-              corresponding color.
+            <li>Uno dei quattro colori, lampeggerà.</li>
+            <li>Usando la tabella corretta, premi il bottone con il colore corrispondente.
             </li>
-            <li>The original button will flash, followed by another. Repeat this
-              sequence in order using the color mapping.
+            <li>Il bottone originale lampeggerà, seguito da un altro. Ripeti
+              questa sequenza in ordine usando la mappatura dei colori sottostante.
             </li>
-            <li>The sequence will lengthen by one each time you correctly enter
-              a sequence until the module is disarmed.
+            <li>La sequenza si allungherà di uno ogni volta che inserirai correttamente
+              la sequenza finché avrai disarmato il modulo.
+            </li>
+            <li>Con errori, si intende quante volte hai già sbagliato a
+              disinnescare la bomba, corrisponde quindi al numero di "X" indicate
+              sopra al timer.
             </li>
           </ol>
           <img src="img/SimonComponent_ColourLegend.svg"
                style="height: 9em; margin: 1em auto; display: block;"
-               alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green"/>
+               alt="Sopra: Blu, Sinistra: Rosso, Destra: Giallo, Sotto: Verde"/>
 
-          <p>If the serial number contains a vowel:
-
-          <p>
-          <table class="repeaters-table">
-            <tr>
-              <th colspan="2" class="repeaters-spacer"></th>
-              <th>Red Flash</th>
-              <th>Blue Flash</th>
-              <th>Green Flash</th>
-              <th>Yellow Flash</th>
-            </tr>
-            <tr>
-              <th rowspan="3">Button&nbsp;to&nbsp;press:</th>
-              <th>No&nbsp;Strikes</th>
-              <td>Blue</td>
-              <td>Red</td>
-              <td>Yellow</td>
-              <td>Green</td>
-            </tr>
-            <th>1&nbsp;Strike</th>
-            <td>Yellow</td>
-            <td>Green</td>
-            <td>Blue</td>
-            <td>Red</td>
-            </tr>
-            <th>2&nbsp;Strikes</th>
-            <td>Green</td>
-            <td>Red</td>
-            <td>Yellow</td>
-            <td>Blue</td>
-            </tr>            </table>
-
-          <p>If the serial number does <em>not</em> contain a vowel:
+          <p>Se il numero seriale contiene una vocale:
 
           <p>
           <table class="repeaters-table">
             <tr>
               <th colspan="2" class="repeaters-spacer"></th>
-              <th>Red Flash</th>
-              <th>Blue Flash</th>
-              <th>Green Flash</th>
-              <th>Yellow Flash</th>
+              <th>Rosso Lampeggia</th>
+              <th>Blu Lampeggia</th>
+              <th>Verde Lampeggia</th>
+              <th>Giallo Lampeggia</th>
             </tr>
             <tr>
-              <th rowspan="3">Button&nbsp;to&nbsp;press:</th>
-              <th>No&nbsp;Strikes</th>
-              <td>Blue</td>
-              <td>Yellow</td>
-              <td>Green</td>
-              <td>Red</td>
+              <th rowspan="3">Bottone&nbsp;da&nbsp;premere:</th>
+              <th>Nessun&nbsp;Errore</th>
+              <td>Blu</td>
+              <td>Rosso</td>
+              <td>Giallo</td>
+              <td>Verde</td>
             </tr>
-            <th>1&nbsp;Strike</th>
-            <td>Red</td>
-            <td>Blue</td>
-            <td>Yellow</td>
-            <td>Green</td>
+            <tr>
+              <th>1&nbsp;Errore</th>
+              <td>Giallo</td>
+              <td>Verde</td>
+              <td>Blu</td>
+              <td>Rosso</td>
             </tr>
-            <th>2&nbsp;Strikes</th>
-            <td>Yellow</td>
-            <td>Green</td>
-            <td>Blue</td>
-            <td>Red</td>
-            </tr>            </table>
+            <tr>
+              <th>2&nbsp;Errori</th>
+              <td>Verde</td>
+              <td>Rosso</td>
+              <td>Giallo</td>
+              <td>Blu</td>
+            </tr>
+        </table>
+
+          <p>Se il numero seriale <em>non</em> continene una vocale:
+
+          <p>
+          <table class="repeaters-table">
+            <tr>
+              <th colspan="2" class="repeaters-spacer"></th>
+              <th>Rosso Lampeggia</th>
+              <th>Blu Lampeggia</th>
+              <th>Verde Lampeggia</th>
+              <th>Giallo Lampeggia</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Bottone&nbsp;da&nbsp;premere:</th>
+              <th>Nessun&nbsp;Errore</th>
+              <td>Blu</td>
+              <td>Giallo</td>
+              <td>Verde</td>
+              <td>Rosso</td>
+            </tr>
+            <tr>
+              <th>1&nbsp;Errore</th>
+              <td>Rosso</td>
+              <td>Blu</td>
+              <td>Giallo</td>
+              <td>Verde</td>
+            </tr>
+            <tr>
+              <th>2&nbsp;Errori</th>
+              <td>Giallo</td>
+              <td>Verde</td>
+              <td>Blu</td>
+              <td>Rosso</td>
+            </tr>
+        </table>
 
         </div>
         <div class="page-footer relative-footer"></div>
