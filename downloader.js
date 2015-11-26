@@ -8,8 +8,9 @@ var Download = require('download');
 var cheerio = require('cheerio');
 
 var ROOT = 'http://www.bombmanual.com/manual/1/html/';
-var DEST_IMG = './public/img';
-var DEST_CSS = './public/css';
+var DEST_IMG = './public/img/';
+var DEST_CSS = './public/css/';
+var DEST_JS = './public/js/';
 
 var INDEX = fs.readFileSync('./public/index.html', 'utf8');
 
@@ -25,12 +26,15 @@ $('img').each(function(index, image) {
 async.each(images, function(image, cb) {
 
   var img = ROOT + image;
+  var path = image.split('/').slice(1);
 
-  console.log('Downloading:', img);
+  path = path.slice(0, path.length -1).join('/');
+
+  console.log('Downloading:', img, 'in:', path);
 
   new Download()
     .get(img)
-    .dest(DEST_IMG)
+    .dest(DEST_IMG + path)
     .run(cb);
 
 }, function(err) {
@@ -39,15 +43,32 @@ async.each(images, function(image, cb) {
 
   // downloading last files
 
-  new Download()
-    .get(ROOT + 'css/normalize.css')
-    .get(ROOT + 'css/main.css')
-    .dest(DEST_CSS)
-    .run(function() {
+  async.parallel([
 
-      console.log('Done');
-      process.exit(0);
+    // CSS
 
-    });
+    function(cb) {
+      new Download()
+        .get(ROOT + 'css/normalize.css')
+        .get(ROOT + 'css/main.css')
+        .dest(DEST_CSS)
+        .run(cb);
+    },
+
+    // JS
+
+    function(cb) {
+      new Download()
+        .get(ROOT + 'js/main.js')
+        .dest(DEST_JS)
+        .run(cb);
+    }
+
+  ], function() {
+
+    console.log('Done');
+    process.exit(0);
+
+  });
 
 });

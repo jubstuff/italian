@@ -1,6 +1,7 @@
 .idea/
 node_modules/
 
-public/img/*.svg
-public/img/*.png
-public/css/*.css
+public/**/*.svg
+public/**/*.png
+public/**/*.css
+public/**/*.js
