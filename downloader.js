@@ -11,10 +11,7 @@ var ROOT = 'http://www.bombmanual.com/manual/1/html/';
 var DEST_IMG = './public/img';
 var DEST_CSS = './public/CSS';
 
-var INDEX = fs.readFileSync('./public/index.html', 'utf8')
-  .replace(/\n/g, '')
-  .replace(/\r/g, '')
-  .replace(/  /g, '');
+var INDEX = fs.readFileSync('./public/index.html', 'utf8');
 
 var $ = cheerio.load(INDEX);
 var images = [];
