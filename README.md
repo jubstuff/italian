@@ -4,6 +4,10 @@ Keep Talking and Nobody Explodes
 
 Feel free to collaborate to this project
 
+# Notice
+
+This is a work in progress
+
 # Downloader
 
 Per scaricare i files delle immagini, necessari alla corretta visualizzazione, 
